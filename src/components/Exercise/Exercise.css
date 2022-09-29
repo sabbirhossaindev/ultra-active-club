@@ -1,0 +1,39 @@
+.exercise-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.gim-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 100px 20px;
+}
+@media screen and (max-width: 900px) {
+    .gim-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 100px 10px;
+    }
+    .cart-container{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .gim-container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 80 5px;
+    }
+    .cart-container{
+        width: 200px;
+        margin-right: 20px;
+    }
+}
+.cart-container{
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: orange;
+    width: 210px;
+    padding: 15px;
+    margin-right: 10px;
+}

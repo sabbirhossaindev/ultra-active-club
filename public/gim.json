@@ -2,43 +2,43 @@
     {
       "id": 1,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-lVCJ0TGvdMK9PSeaOz_s3ZMipa-Rk3hxQ&usqp=CAU",
-      "name": "Dumble",
-      "p": "Amet minim mollit non deserunt ullamco est sit aliqua dolor doamet sint.",
-      "time": "30 s" 
+      "name": "sabbir",
+      "p": "Amet minim mollit non deserunt.",
+      "time": "30s" 
     },
     {
         "id": 2,
         "img": "https://www.inquirer.com/resizer/dBPrvvKizaK0HEiOVzz8hQ87J_Y=/700x467/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/pmn/4JVTT5N7SFGORIEFC3FEENNLO4.jpg",
-        "name": "Dumble",
-        "p": "Amet minim mollit non deserunt ullamco est sit aliqua dolor doamet sint.",
+        "name": "Nadim",
+        "p": "Amet minim mollit non deserunt.",
         "time": "30 s"
     },
     {
         "id": 3,
         "img": "https://www.mensjournal.com/wp-content/uploads/2020/12/shutterstock_1410668642.jpg?w=800&h=450&crop=1&quality=86&strip=all",
-        "name": "Dumble",
-        "p": "Amet minim mollit non deserunt ullamco est sit aliqua dolor doamet sint.",
+        "name": "Hridoy",
+        "p": "Amet minim mollit non deserunt.",
         "time": "30 s"
     },
     {
         "id": 4,
         "img": "https://cdn.shopify.com/s/files/1/0264/6900/7383/articles/man-doing-abs-exercise-at-home_1140x.jpg?v=1632822103",
-        "name": "Dumble",
-        "p": "Amet minim mollit non deserunt ullamco est sit aliqua dolor doamet sint.",
+        "name": "Abdullah",
+        "p": "Amet minim mollit non deserunt.",
         "time": "30 s"
     },
     {
         "id": 5,
         "img": "https://www.usdermatologypartners.com/wp-content/uploads/2020/09/Master-Blast-Skin-Care-Goals-Healthy-Diet.jpeg",
-        "name": "Dumble",
-        "p": "Amet minim mollit non deserunt ullamco est sit aliqua dolor doamet sint.",
+        "name": "Nihon",
+        "p": "Amet minim mollit non deserunt.",
         "time": "30 s"
     },
     {
         "id": 6,
         "img": "https://cdn.mos.cms.futurecdn.net/KBLKSo6QHBoBKLcvL7sBhS-970-80.jpg.webp",
-        "name": "Dumble",
-        "p": "Amet minim mollit non deserunt ullamco est sit aliqua dolor doamet sint.",
+        "name": "Monir",
+        "p": "Amet minim mollit non deserunt.",
         "time": "30 s"
     }
     

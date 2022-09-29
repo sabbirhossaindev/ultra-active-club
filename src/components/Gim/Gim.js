@@ -6,20 +6,23 @@ const Gim = ({gim, handleAddToCart }) => {
     const {img, name, p, time} = gim;
 
     return (
-        
-        <div className="card w-4/5 h-96 bg-base-100 shadow-xl">
-            <figure>
-                <img src={img} alt="Shoes" />
-            </figure>
-        <div className="card-body">
-            <h2 className={name}>Shoes!</h2>
-                <p>{p}</p>
-                <p>{time}</p>
-            <div className="card-actions justify-end">
-            <button onClick={() => handleAddToCart(gim)} className="btn btn-primary w-full absolute bottom-0 left-0">Buy Now</button>
+        <section>
+            <div className="card w-4/5 h-96 bg-base-100 shadow-xl">
+                <figure>
+                    <img src={img} alt="" />
+                </figure>
+            <div className="card-body">
+                <h2 className='text-xl'>{name}.</h2>
+                    <p>{p}</p>
+                    <p>{time}</p>
+                <div className="card-actions justify-end">
+                <button onClick={() => handleAddToCart(gim)} className="btn btn-primary w-full absolute bottom-0 left-0">Add too cart</button>
+                </div>
             </div>
-        </div>
-        </div>
+            </div>
+        </section>
+        
+        
     );
 };
 

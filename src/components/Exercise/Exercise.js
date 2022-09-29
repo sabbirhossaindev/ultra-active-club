@@ -16,7 +16,10 @@ const Exercise = () => {
         <div className="exercise-container">
             <div className="gim-container">
                 {
-                    gims.map(gim =><Gim key={gim.id}></Gim>)
+                    gims.map(gim => <Gim
+                        key={gim.id}
+                        gim={gim}
+                    ></Gim>)
                 }
             </div>
             <div className="cart-container">

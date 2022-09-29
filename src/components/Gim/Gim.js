@@ -14,7 +14,7 @@ const Gim = ({gim, handleAddToCart }) => {
             <div className="card-body">
                 <h2 className='text-xl'>{name}.</h2>
                     <p>{p}</p>
-                    <p>{time}</p>
+                    <p className='text-primary'>{time} min</p>
                 <div className="card-actions justify-end">
                 <button onClick={() => handleAddToCart(gim)} className="btn btn-primary w-full absolute bottom-0 left-0">Add too cart</button>
                 </div>

@@ -1,52 +1,22 @@
 import React from 'react';
 import './Gim.css';
 
-const Gim = () => {
+const Gim = ({gim, handleAddToCart }) => {
+
+    const {img, name, p, time} = gim;
+
     return (
-        // <div>
-        //     <h2>I am came from Gim</h2>
-        // </div>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-        <div className="col">
-          <div className="card h-100">
-            <img src="" className='card-img-top' alt="" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div className="card w-4/5 h-96 bg-base-100 shadow-xl">
+        <figure><img src={img} alt="Shoes" /></figure>
+        <div className="card-body">
+            <h2 className={name}>Shoes!</h2>
+                <p>{p}</p>
+                <p>{time}</p>
+            <div className="card-actions justify-end">
+            <button onClick={() => handleAddToCart(gim)} className="btn btn-primary w-full absolute bottom-0 left-0">Buy Now</button>
             </div>
-            <div className="card-footer">
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
         </div>
-            
-        <div className="col">
-          <div className="card h-100">
-            <img src="" className='card-img-top' alt="" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div className="card-footer">
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
         </div>
-            
-        <div className="col">
-          <div className="card h-100">
-            <img src="" className='card-img-top' alt="" />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div className="card-footer">
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-            
-      </div>
     );
 };
 

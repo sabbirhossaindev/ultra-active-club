@@ -16,7 +16,7 @@ const Exercise = () => {
         <div className="exercise-container">
             <div className="gim-container">
                 {
-                    gims.map(gim =><Gim></Gim>)
+                    gims.map(gim =><Gim key={gim.id}></Gim>)
                 }
             </div>
             <div className="cart-container">

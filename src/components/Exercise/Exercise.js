@@ -14,15 +14,14 @@ const Exercise = () => {
         .then(res =>{
          if(localStorage.getItem('time')){
            setLocal(localStorage.getItem('time'))
- 
            setGims(res);
- 
          }
          setGims(res);
-         
-         
         })
-   },[]);
+
+    }, []);
+    
+
     const handleAddProduct = (time) =>{
         const Total = TotalTime + parseInt(time);
         SetTotalTime(Total)
@@ -31,7 +30,7 @@ const Exercise = () => {
         localStorage.setItem('time',time);
         setLocal(localStorage.getItem('time'))
         
-      }
+    }
 
 
     return (
@@ -45,12 +44,12 @@ const Exercise = () => {
                     ></Gim>)
                 }
             </div>
+
             <div className="cart-container">
-            <div className='cart'>
-            <div className='flex'>
-                <img src="" alt="" />
-                <h3 className=''>MD Sabbir Hossain</h3>
-            </div>
+                <div className='flex'>
+                    <img src="" alt="" />
+                    <h3 className=''>MD Sabbir Hossain</h3>
+                </div>
             <p>Badarganj, Rangpur</p>
 
             <div className='mt-3 flex p-4 myself-detals'>
@@ -75,13 +74,13 @@ const Exercise = () => {
                     <button className='break-btn' onClick={()=>breaktime(20)}>20m</button>
                 </div>
                 <div>
-                <button className='break-btn' onClick={()=>breaktime(25)}>25m</button>
+                    <button className='break-btn' onClick={()=>breaktime(25)}>25m</button>
                 </div>
                 <div>
-                <button className='break-btn' onClick={()=>breaktime(30)}>30m</button>
+                    <button className='break-btn' onClick={()=>breaktime(30)}>30m</button>
                 </div>
                 <div>
-                <button className='break-btn' onClick={()=>breaktime(40)}>40m</button>
+                    <button className='break-btn' onClick={()=>breaktime(40)}>40m</button>
                 </div>
             </div>
 
@@ -104,8 +103,6 @@ const Exercise = () => {
             <div className='mt-5'>
                 <button className='btn-secondary px-5 py-2 rounded-lg'>Activity Completed</button>
             </div>
-
-        </div>
             </div>
         </div>
     );

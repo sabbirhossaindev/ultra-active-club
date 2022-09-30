@@ -1,16 +1,43 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../Cart/Cart';
 import Gim from '../Gim/Gim';
 import './Exercise.css';
 
 const Exercise = () => {
     const [gims, setGims] = useState([])
+    const [TotalTime, SetTotalTime] = useState(0)
+    const[local,setLocal] = useState(0)
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     fetch('gim.json')
+    //         .then(rse => rse.json())
+    //         .then(data => setGims(data))
+    // }, []);
+
+    useEffect(()=>{
         fetch('gim.json')
-            .then(rse => rse.json())
-            .then(data =>setGims(data))
-    }, [])
+        .then(data => data.json())
+        .then(res =>{
+         if(localStorage.getItem('time')){
+           setLocal(localStorage.getItem('time'))
+ 
+           setGims(res);
+ 
+         }
+         setGims(res);
+         
+         
+        })
+   },[]);
+    const handleAddProduct = (time) =>{
+        const Total = TotalTime + parseInt(time);
+        SetTotalTime(Total)
+    }
+    const breaktime = (time) =>{
+        localStorage.setItem('time',time);
+        setLocal(localStorage.getItem('time'))
+        
+      }
+
 
     return (
         <div className="exercise-container">
@@ -19,11 +46,71 @@ const Exercise = () => {
                     gims.map(gim => <Gim
                         key={gim.id}
                         gim={gim}
+                        handleAddProduct={handleAddProduct}
                     ></Gim>)
                 }
             </div>
             <div className="cart-container">
-                <Cart></Cart>
+            <div className='cart'>
+            <div className='flex'>
+                <img src="" alt="" />
+                <h3 className=''>MD Sabbir Hossain</h3>
+            </div>
+            <p>Badarganj, Rangpur</p>
+
+            <div className='mt-3 flex p-4 myself-detals'>
+                <div className='mr-3'>
+                    <p><span className='h1'>58</span> kg</p>
+                    <p className='under-write'>weight</p>
+                </div>
+                <div className='mr-4'>
+                    <p><span className='h1'>5.5</span></p>
+                    <p className='under-write'>Height</p>
+                </div>
+                <div className=''>
+                    <p><span className='h1'>20</span>y's</p>
+                    <p className='under-write'>Age</p>
+                </div>
+            </div>
+
+            <h2 className='text-xl mt-3'>Add A Break</h2>
+
+            <div className='break-time flex gap-3 mt-3'>
+                <div>
+                    <button className='break-btn' onClick={()=>breaktime(20)}>20m</button>
+                </div>
+                <div>
+                <button className='break-btn' onClick={()=>breaktime(25)}>25m</button>
+                </div>
+                <div>
+                <button className='break-btn' onClick={()=>breaktime(30)}>30m</button>
+                </div>
+                <div>
+                <button className='break-btn' onClick={()=>breaktime(40)}>40m</button>
+                </div>
+            </div>
+
+            <h2 className='text-xl mt-5'>Exercise Details</h2>
+
+            <div className='mt-4'>
+                <div className='exercise-time'>
+                    <p>Exercise time</p>
+                    <span>{TotalTime} min</span>
+                </div>
+            </div>
+
+            <div className='mt-4'>
+                <div className='break-time'>
+                    <p>Break time</p>
+                    <span>{local} min</span>
+                </div>
+            </div>
+
+            <div className='mt-5'>
+                <button className='btn-secondary px-5 py-2 rounded-lg'>Activity Completed</button>
+            </div>
+
+        </div>
             </div>
         </div>
     );

@@ -7,11 +7,6 @@ const Exercise = () => {
     const [TotalTime, SetTotalTime] = useState(0)
     const[local,setLocal] = useState(0)
 
-    // useEffect(() => {
-    //     fetch('gim.json')
-    //         .then(rse => rse.json())
-    //         .then(data => setGims(data))
-    // }, []);
 
     useEffect(()=>{
         fetch('gim.json')

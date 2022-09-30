@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Answer from './components/Answer/Answer';
 import Exercise from './components/Exercise/Exercise';
-// import profile from '../public/download.png';
+import profile from '../src/pic/download.png';
 
 function App() {
 
@@ -36,11 +37,12 @@ const breaktime = (time) =>{
   return (
     <div>
       <div className='header-data text-center'>
-        <img src='' alt='' />
+        <img className='img' src={profile} alt='' />
         <h2 className='text-2xl text-purple-700'>Gim Club BD</h2>
       </div>
       <p className='header-title'>Select today's exercise</p>
       <Exercise></Exercise>
+      <Answer></Answer>
     </div>
   );
 }

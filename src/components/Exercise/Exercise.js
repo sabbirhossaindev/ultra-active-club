@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Gim from '../Gim/Gim';
 import './Exercise.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import picture from '../../pic/sabbir.png';
 
 const Exercise = () => {
+
+    const notify = () => toast("Gim Club BD !");
+
     const [gims, setGims] = useState([])
     const [TotalTime, SetTotalTime] = useState(0)
     const[local,setLocal] = useState(0)
@@ -47,10 +53,14 @@ const Exercise = () => {
 
             <div className="cart-container">
                 <div className='flex'>
-                    <img src="" alt="" />
-                    <h3 className=''>MD Sabbir Hossain</h3>
+                    <div>
+                        <img className='picture' src={picture} alt="" />
+                    </div>
+                    <div className='px-2'>
+                        <h3 className=''>MD Sabbir Hossain</h3>
+                        <small>Badarganj, Rangpur</small>
+                    </div>
                 </div>
-            <p>Badarganj, Rangpur</p>
 
             <div className='mt-3 flex p-4 myself-detals'>
                 <div className='mr-3'>
@@ -101,7 +111,8 @@ const Exercise = () => {
             </div>
 
             <div className='mt-5'>
-                <button className='btn-secondary px-5 py-2 rounded-lg'>Activity Completed</button>
+                    <button className='btn-secondary px-5 py-2 rounded-lg' onClick={notify}>Activity Completed</button>
+                    <ToastContainer />
             </div>
             </div>
         </div>
